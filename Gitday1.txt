@@ -1,0 +1,180 @@
+Microsoft Windows [Version 10.0.19044.3086]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Surya V\Desktop\Git-Tut>git init
+Initialized empty Git repository in C:/Users/Surya V/Desktop/Git-Tut/.git/
+
+C:\Users\Surya V\Desktop\Git-Tut>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new 1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Surya V\Desktop\Git-Tut>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new 1.txt
+        python.txt.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Surya V\Desktop\Git-Tut>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        example.txt.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Surya V\Desktop\Git-Tut>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        example.txt
+        example.txt.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Surya V\Desktop\Git-Tut>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        example.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Surya V\Desktop\Git-Tut>git add example.txt
+
+C:\Users\Surya V\Desktop\Git-Tut>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   example.txt
+
+
+C:\Users\Surya V\Desktop\Git-Tut>git commit -m "example file commit"
+[master (root-commit) c3f2ea7] example file commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 example.txt
+
+C:\Users\Surya V\Desktop\Git-Tut>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\Surya V\Desktop\Git-Tut>git remote add origin https://github.com/Surya048122/git-tuts.git
+
+C:\Users\Surya V\Desktop\Git-Tut>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\Surya V\Desktop\Git-Tut>git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/Surya048122/git-tuts.git'
+
+C:\Users\Surya V\Desktop\Git-Tut>git branch
+* master
+
+C:\Users\Surya V\Desktop\Git-Tut>git push -u origin master
+remote: Permission to Surya048122/git-tuts.git denied to Surya8122.
+fatal: unable to access 'https://github.com/Surya048122/git-tuts.git/': The requested URL returned error: 403
+
+C:\Users\Surya V\Desktop\Git-Tut>git push --set-upstream origin master
+
+C:\Users\Surya V\Desktop\Git-Tut>git push -u origin master
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 227 bytes | 227.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Surya048122/git-tuts.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+C:\Users\Surya V\Desktop\Git-Tut>git checkout -b "copy1"
+Switched to a new branch 'copy1'
+
+C:\Users\Surya V\Desktop\Git-Tut>git status
+On branch copy1
+nothing to commit, working tree clean
+
+C:\Users\Surya V\Desktop\Git-Tut>git branch
+* copy1
+  master
+
+C:\Users\Surya V\Desktop\Git-Tut>git add example.txt
+
+C:\Users\Surya V\Desktop\Git-Tut>git status
+On branch copy1
+nothing to commit, working tree clean
+
+C:\Users\Surya V\Desktop\Git-Tut>git status
+On branch copy1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        example2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Surya V\Desktop\Git-Tut>git add example2.txt
+
+C:\Users\Surya V\Desktop\Git-Tut>git status
+On branch copy1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   example2.txt
+
+
+C:\Users\Surya V\Desktop\Git-Tut>git commit -m "example2 file commit"
+[copy1 1fbded9] example2 file commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 example2.txt
+
+C:\Users\Surya V\Desktop\Git-Tut>git push -u origin copy1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 277 bytes | 277.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'copy1' on GitHub by visiting:
+remote:      https://github.com/Surya048122/git-tuts/pull/new/copy1
+remote:
+To https://github.com/Surya048122/git-tuts.git
+ * [new branch]      copy1 -> copy1
+branch 'copy1' set up to track 'origin/copy1'.
+
+C:\Users\Surya V\Desktop\Git-Tut>git push
+Everything up-to-date
+
+C:\Users\Surya V\Desktop\Git-Tut>git status
+On branch copy1
+Your branch is up to date with 'origin/copy1'.
+
+nothing to commit, working tree clean
+
+C:\Users\Surya V\Desktop\Git-Tut>
+
+
+
